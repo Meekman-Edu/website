@@ -5,7 +5,9 @@ const Tips = () => {
         <p className="text-xl text-gray-500">
           For Quality books and educational materials
         </p>
-        <p className="text-2xl font-bold text-primary">Meekman got you cover</p>
+        <p className="text-2xl font-bold text-primary">
+          Meekman got you covered
+        </p>
       </div>
     </section>
   );

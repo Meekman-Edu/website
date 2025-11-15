@@ -1,7 +1,7 @@
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
 import { BookOpen, LibraryBig, FlaskConical, BookMarked } from "lucide-react";
 import image1 from "@/images/about.jpeg";
+import LearnMoreButton from "../button/LearnMoreButton";
 
 // Services array
 const services = [
@@ -48,7 +48,7 @@ const Services = () => {
 
         {/* Text Block */}
         <div className="w-full md:w-1/2 text-black space-y-6">
-          <h2 className="text-center md:text-left text-[32px] leading-[48px] text-green-900 font-bold">
+          <h2 className="text-center md:text-left text-[32px] leading-12 text-green-900 font-bold">
             Our Services
           </h2>
 
@@ -71,7 +71,7 @@ const Services = () => {
           </p>
 
           <div className="text-center md:text-left">
-            <Button className="mt-2">Learn more</Button>
+            <LearnMoreButton />
           </div>
         </div>
       </section>

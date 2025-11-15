@@ -1,10 +1,12 @@
 import Image from "next/image";
 import image1 from "@/images/about.jpeg";
 import LearnMoreButton from "../button/LearnMoreButton";
-
-const About = () => {
+interface AboutProps {
+  learnMoreBtn?: boolean;
+}
+const About = ({ learnMoreBtn = true }: AboutProps) => {
   return (
-    <section className="w-full max-w-[1440px] mx-auto flex flex-col md:flex-row items-center justify-between gap-8 px-4  pt-20">
+    <section className="w-full max-w-[1440px] mx-auto flex flex-col md:flex-row items-center justify-between gap-8 px-4 ">
       <div className="w-full md:w-1/2">
         <Image
           src={image1}
@@ -15,30 +17,30 @@ const About = () => {
         />
       </div>
 
-      <div className="w-full md:w-1/2 text-black space-y-6">
-        <h2 className="text-center md:text-left text-[32px] leading-12 text-primary font-bold">
+      <div className="w-full md:w-1/2 text-black space-y-4">
+        <h2 className="text-center md:text-left text-base md:text-lg  text-amber-500 font-bold">
           About Us
         </h2>
 
         <p className="text-[18px] leading-8 px-2 md:px-0">
-          Meekman is a leading <b>Book Publishing Company</b> dedicated to
-          delivering <b>innovative solutions</b> that meet the evolving needs of
-          our clients. With a strong commitment to excellence, we specialize in
+          <b className="text-xl font-bold text-primary">
+            Meekan Books and Educational Services
+          </b>{" "}
+          is a leading <b>book publishing company</b> dedicated to delivering{" "}
+          <b>innovative solutions</b> that meet the evolving needs of the
+          society. With a strong commitment to excellence, we specialize in
           providing services designed to enhance performance, drive efficiency,
           and create value.
-          <br />
           <br />
           Our team of experts brings years of experience and a passion for
           innovation to every project, ensuring that we remain at the forefront
           of industry trends.
           <br />
-          <br />
           <b>At Meekman,</b> customer satisfaction is our top priority. We pride
           ourselves on building long-lasting relationships through trust,
           reliability, and outstanding service.
         </p>
-
-        <LearnMoreButton />
+        {learnMoreBtn && <LearnMoreButton />}
       </div>
     </section>
   );
