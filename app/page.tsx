@@ -5,7 +5,7 @@ import Contact from "@/components/component/Contact";
 import ProductsPage from "@/components/component/Products";
 import Tips from "@/components/component/Tips";
 import Link from "next/link";
-import PreviousSeminar from "@/components/component/PreviousSeminar";
+import SeminarsWorkshopsSection from "@/components/component/PreviousSeminar";
 
 export default function Home() {
   return (
@@ -19,7 +19,7 @@ export default function Home() {
       <About />
       <Services />
       <ProductsPage />
-      <PreviousSeminar />
+      <SeminarsWorkshopsSection />
       {/* our services section */}
 
       <Contact />
